@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dim_country
+    description: Dimensão de País da Adventure Works.
+    columns:
+      - name: country_code
+        description: Chave primária da tabela País.
+        tests:
+          - unique
+          - not_null

@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project' # <-- Name of the project.
+name: 'dbt_adw' # <-- Name of the project.
 version: '1.0.0'
 config-version: 2
 
@@ -36,13 +36,9 @@ models:
     staging:
       +materialized: view
       +schema: stg
-    marts:
+    mart:
       +materialized: table
-      +schema: marts
-      intermediate:
-        +materialized: view
-        +schema: intermediate
-
+      +schema: mart
 
 seeds:
   dbt_adw:
