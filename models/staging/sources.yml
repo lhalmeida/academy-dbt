@@ -89,3 +89,33 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: salesorderheader
+        description: Uma linha por pedido.
+        columns:
+          - name: salesorderid # Utilizando o salesorderid no teste, pois cada pedido deverá ter um id único.
+            description: Chave primária da tabela de pedidos.
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderheadersalesreason
+        description: Detalhe de motivo para cada pedido da tabela salesorderheader. 
+        # Não será realizado teste por não haver uma chave única
+
+      - name: salesorderdetail
+        description: Uma linha por item de cada pedido.
+        columns:
+          - name: salesorderdetailid # Utilizando o salesorderdetailid no teste, pois cada salesorderdetailid deverá ter um id único.
+            description: Chave de cada de item para cada pedido da tabela salesorderheader.
+            tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        columns:
+          - name: creditcardid # Utilizando o creditcardid no teste, pois cada Cartão deverá ter um id único.
+            description: Chave primária da tabela de Cartão.
+            tests:
+              - unique
+              - not_null

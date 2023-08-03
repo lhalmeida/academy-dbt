@@ -39,6 +39,10 @@ models:
     mart:
       +materialized: table
       +schema: mart
+      intermediate:
+        +materialized: view
+        +schema: intermediate
+
 
 seeds:
   dbt_adw:
