@@ -9,23 +9,18 @@ with
         from {{ ref('stg_erp__salesorderdetail') }}
     ),
 
-    orders_reason  as (
-        select *
-        from {{ ref('stg_erp__salesorderheadersalesreason') }}
-    ),
     
     join_orders_itens as (
         select
 
             orders.order_id,
-            --orders_reason.sales_reason_id,
             orders.salesperson_id,
             orders.customer_id,
             orders.creditcard_id,
             orders.address_id,
             orders_itens.product_id,
 
-
+            orders.status,
             orders_itens.quantity,
             orders_itens.unit_price,
             orders_itens.unit_price_discount,

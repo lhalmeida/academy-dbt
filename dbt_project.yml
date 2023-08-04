@@ -39,9 +39,9 @@ models:
     mart:
       +materialized: table
       +schema: mart
-      intermediate:
+    bridge:
         +materialized: view
-        +schema: intermediate
+        +schema: bridge
 
 
 seeds:

@@ -11,6 +11,7 @@ with
             cast(duedate as datetime) as due_date,      
             cast(shipdate as datetime) as ship_date,
 
+            cast(status as int) as status,
             cast(taxamt as numeric) as tax_amt,
             cast(freight as numeric) as freight,
             cast(subtotal as numeric) as sub_total,

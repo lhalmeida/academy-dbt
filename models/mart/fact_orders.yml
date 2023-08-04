@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: fact_orders
+    description: Fato de Ordens de Venda da Adventure Works.
+    columns:
+      - name: pk_orders
+        description: Chave primária da tabela fato de Oredens de Venda.
+        tests:
+          - unique
+          - not_null
