@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dim_creditcard
+    description: Dimensão de Cartões de Crédito da Adventure Works.
+    columns:
+      - name: creditcard_id
+        description: Chave primária de Cartões de Crédito.
+        tests:
+          - unique
+          - not_null

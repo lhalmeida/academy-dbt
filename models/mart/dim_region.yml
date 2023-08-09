@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dim_region
+    description: Dimensão de Motivos de Venda da Adventure Works.
+    columns:
+      - name: address_id
+        description: Chave primária da tabela Motivos de Venda.
+        tests:
+          - unique
+          - not_null

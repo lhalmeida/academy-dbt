@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dim_employee
+    description: Dimensão de funcionários da Adventure Works.
+    columns:
+      - name: employee_id
+        description: Chave primária da tabela funcionários.
+        tests:
+          - unique
+          - not_null
